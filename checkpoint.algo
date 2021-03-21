@@ -1,0 +1,35 @@
+ALGORITHM sum_diff
+VAR
+
+    i=0;
+    j=0;
+    k=0;
+    sum=0;
+ array1 : ARRAY_OF INTEGER[10];
+BEGIN
+    FOR i FROM 0 To t1.length STEP step1  DO
+        WHILE (j<t1.length-1) DO
+            if(t1[i]==t2[j]) then 
+            break;
+            
+        END_WHILE
+        if (j==tab.length)
+        tab[k]=t1[i];
+        k++;
+
+    END_FOR
+     FOR i FROM 0 To t2.length STEP step1  DO
+        WHILE (i<t2.length-1) DO
+            if(t2[i]==t1[j]) then 
+            break;
+            
+        END_WHILE
+        if (j==tab.length)
+        tab[k]=t1[i];
+        k++;
+        END_FOR
+        FOR i FROM 0 TO tab.length STEP step1  DO
+            sum+=tab[i];
+
+        END_FOR
+END
